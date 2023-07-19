@@ -1,5 +1,5 @@
 # K6_Api_performance_testing
-This project make a performance test to an API(POST) using Data Parameterization
+This project make a performance test to an API(POST) "https://reqres.in/api/users" using Data Parameterization
  * Smoke test
  * Spike test
  * Stress test
@@ -23,7 +23,12 @@ k6 run -o experimental-prometheus-rw <script_test.js>
 ## Report
 * k6 console
 
+![image](https://github.com/AdrianJPT/K6_Api_performance_testing/assets/86939628/4ebb7b60-901c-4b89-afe8-bf0d02f50285)
+
 * grafana
+
+![image](https://github.com/AdrianJPT/K6_Api_performance_testing/assets/86939628/7539f342-cfb0-4754-a6d5-72b3af213da5)
+
 
 ## Prerequisites 
 * The _Docker version_ must be at least `20.10.10`.

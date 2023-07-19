@@ -7,10 +7,14 @@ Download the file en deploy the containers using "docker-compose.yml" file.
 ```bash
 git clone https://github.com/AdrianJPT/K6_Api_performance_testing.git
 docker compose build
-docker compose up
+docker compose -f K6_Api_performance_testing/docker-compose.yml build
+docker compose -f K6_Api_performance_testing/docker-compose.yml up
 ```
 
 ## Usage
+```bash
+k6 run -o experimental-prometheus-rw <script_test.js>
+```
 
 ## Prerequisites 
 * The _Docker version_ must be at least `20.10.10`.

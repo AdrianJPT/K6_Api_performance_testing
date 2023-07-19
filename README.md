@@ -1,5 +1,9 @@
 # K6_Api_performance_testing
-Workloads script to make performance testing to an API using:
+This project make a performance test to an API(POST) using Data Parameterization
+ * Smoke test
+ * Spike test
+ * Stress test
+ * Load test
 
 # Start
 Download the file en deploy the containers using "docker-compose.yml" file.
@@ -15,6 +19,11 @@ docker compose -f K6_Api_performance_testing/docker-compose.yml up
 ```bash
 k6 run -o experimental-prometheus-rw <script_test.js>
 ```
+
+## Report
+* k6 console
+
+* grafana
 
 ## Prerequisites 
 * The _Docker version_ must be at least `20.10.10`.

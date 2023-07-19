@@ -54,7 +54,7 @@ export default function () {
     
   // Using a JSON string as body
     var response = http.post(url, payload, params);
-    console.log(response.json()); 
+    //console.log(response.json()); 
 
     sleep(1);
 };

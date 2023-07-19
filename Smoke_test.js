@@ -44,7 +44,7 @@ export default function () {
         "name": RamdomDataCSV['names'],
         "job": RamdomDataCSV['jobs'],
         });
-    console.log('debug: ', JSON.stringify(payload));
+    //console.log('debug: ', JSON.stringify(payload));
 
     var params = {
         //cookies: { my_cookie: 'value' },
@@ -59,7 +59,7 @@ export default function () {
     describe('CHAI ...', () => {
         
         var response = http.post(url, payload, params);
-        console.log('result: ', response);
+        //console.log('result: ', response);
         expect(response.status,'El estado de la respuesta').to.equal(201)
         })
 

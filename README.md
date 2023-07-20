@@ -9,10 +9,11 @@ This project make a performance test to an API(POST) "https://reqres.in/api/user
 Download the file en deploy the containers using "docker-compose.yml" file.
 > IMPORTANT Ports used for docker is 9090, 3000, 6565 _Feel free to change them if it's needed_
 ```bash
-git clone https://github.com/AdrianJPT/K6_Api_performance_testing.git
-docker compose build
-docker compose -f K6_Api_performance_testing/docker-compose.yml build
-docker compose -f K6_Api_performance_testing/docker-compose.yml up
+# git clone https://github.com/AdrianJPT/K6_Api_performance_testing.git
+
+# docker compose -f K6_Api_performance_testing/docker-compose.yml build
+
+# docker compose -f K6_Api_performance_testing/docker-compose.yml up
 ```
 
 ## Usage

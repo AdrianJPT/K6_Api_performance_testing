@@ -13,10 +13,10 @@ Download the file en deploy the containers using "docker-compose.yml" file.
 git clone https://github.com/AdrianJPT/K6_Api_performance_testing.git
 
 # (2)
-docker compose -f K6_Api_performance_testing/docker-compose.yml build
+cd K6_Api_performance_testing
 
 # (3)
-docker compose -f K6_Api_performance_testing/docker-compose.yml up
+docker compose -f docker_k6-prometheus-grafana/docker-compose.yml up
 ```
 
 ## Usage

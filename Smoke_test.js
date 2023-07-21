@@ -16,12 +16,11 @@ const csvData = new SharedArray("credentials", function() {
 
 export const options = {
     stages: [
- 
         { duration: '10s', target: 5 }, // stay at 5 users for 10 sec
-
-      ],
-      thresholds: {
-        'http_req_duration': ['p(95)<25'], // 99% of requests must complete below 2.5s
+    ],
+    thresholds: {
+        http_req_failed: ['rate<0.01'], // http errors should be less than 1%
+        http_req_duration: ['p(95)<500'], // 95 percent of response times must be below 500ms
       },
     };
 

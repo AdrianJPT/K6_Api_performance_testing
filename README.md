@@ -4,7 +4,8 @@ This project make a performance test to an API(POST) "https://reqres.in/api/user
  * Spike test
  * Stress test
  * Load test
-* And Also add the tests in our CI/CD _.github/workflows/main.yml_ *
+   
+**And also add the tests  in our CI/CD workfflow, file: _.github/workflows/main.yml_**
 
 # Start
 Download the file en deploy the containers using "docker-compose.yml" file.

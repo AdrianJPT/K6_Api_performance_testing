@@ -16,5 +16,9 @@ jobs:
     - name: Upload performance test results
       uses: actions/upload-artifact@v3
       with:
-        name: k6-report
+        name: k6-full-report
         path: results.json
+    - uses: actions/upload-artifact@v3
+      with:
+        name: k6-summary-report
+        path: summary.json

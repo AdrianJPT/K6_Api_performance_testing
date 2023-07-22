@@ -6,6 +6,7 @@ This project make a performance test to an API(POST) "https://reqres.in/api/user
  * Load test
    
 **And also add the tests  in our CI/CD workfflow, file: _.github/workflows/main.yml_**
+![image](https://github.com/AdrianJPT/K6_Api_performance_testing/assets/86939628/9b6bec7f-bffa-4835-a5b9-21dad728fc1c)
 
 # Start
 Download the file en deploy the containers using "docker-compose.yml" file.

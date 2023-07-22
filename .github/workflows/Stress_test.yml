@@ -1,4 +1,4 @@
-name: End-to-end tests
+name: Stress_test
 on: push
 jobs:
   k6_load_test:

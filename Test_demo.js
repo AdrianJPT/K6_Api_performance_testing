@@ -3,7 +3,7 @@ import { check, sleep } from 'k6';
 import { SharedArray } from 'k6/data';
 import { describe, expect} from 'https://jslib.k6.io/k6chaijs/4.3.4.0/index.js'
 import papaparse from 'https://jslib.k6.io/papaparse/5.1.1/index.js';
-
+import { textSummary } from 'https://jslib.k6.io/k6-summary/0.0.1/index.js';
 
 const url = 'https://reqres.in/api/users';
 
@@ -76,3 +76,11 @@ export default function () {
 
     //sleep(5);
 };
+export function handleSummary(data) {
+  console.log('Finished executing performance tests');
+
+  return {
+    'stdout': textSummary(data, { indent: ' ', enableColors: true }), // Show the text summary to stdout...
+    'summary.json': JSON.stringify(data), // and a JSON with all the details...
+  };
+}

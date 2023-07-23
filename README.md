@@ -8,6 +8,13 @@ This project make a performance test to an API(POST) "https://reqres.in/api/user
 **And also add the tests  in our CI/CD workfflow, file: _.github/workflows/main.yml_**
 ![image](https://github.com/AdrianJPT/K6_Api_performance_testing/assets/86939628/9b6bec7f-bffa-4835-a5b9-21dad728fc1c)
 
+
+## Prerequisites 
+* The _Docker version_ must be at least `20.10.10`.
+* The _containerd version_ must be at least `1.5.6`.
+* The _docker-compose version_ must be at least `1.28.0`.
+
+    
 # Start
 Download the file en deploy the containers using "docker-compose.yml" file.
 > IMPORTANT Ports used for docker is 9090, 3000, 6565 _Feel free to change them if it's needed_
@@ -36,9 +43,4 @@ k6 run -o experimental-prometheus-rw <script_test.js>
 
 ![image](https://github.com/AdrianJPT/K6_Api_performance_testing/assets/86939628/7539f342-cfb0-4754-a6d5-72b3af213da5)
 
-
-## Prerequisites 
-* The _Docker version_ must be at least `20.10.10`.
-* The _containerd version_ must be at least `1.5.6`.
-* The _docker-compose version_ must be at least `1.28.0`.
-    
+----------------------------------------------------------------------------------------------

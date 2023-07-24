@@ -23,7 +23,7 @@ jobs:
     - uses: actions/upload-artifact@v3
       if: always()
       with:
-        name: k6-${{ github.job }}-summary-report
+        name: k6-$${{ github.job }}-summary-report
         path: summary.json
         
   Smoke_test:
@@ -49,3 +49,50 @@ jobs:
       with:
         name: k6-${{ github.job }}-summary-report
         path: summary.json
+  Spike_test:
+    runs-on: ubuntu-22.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Run local k6 test
+      uses: grafana/k6-action@v0.2.0
+      with:
+        filename: ${{ github.job }}.js
+        flags: --out json=results.json
+        
+    - name: Upload performance test results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: k6-${{ github.job }}-full-report
+        path: results.json
+    - uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: k6-${{ github.job }}-summary-report
+        path: summary.json
+  Stress_test:
+    runs-on: ubuntu-22.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Run local k6 test
+      uses: grafana/k6-action@v0.2.0
+      with:
+        filename: ${{ github.job }}.js
+        flags: --out json=results.json
+        
+    - name: Upload performance test results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: k6-${{ github.job }}-full-report
+        path: results.json
+    - uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: k6-${{ github.job }}-summary-report
+        path: summary.json
+

@@ -10,20 +10,20 @@ jobs:
     - name: Run local k6 test
       uses: grafana/k6-action@v0.2.0
       with:
-        filename: Load_test.js
+        filename: ${{ github.job }}.js
         flags: --out json=results.json
         
     - name: Upload performance test results
       uses: actions/upload-artifact@v3
       if: always()
       with:
-        name: k6-full-report
+        name: k6-${{ github.job }}-full-report
         path: results.json
         
     - uses: actions/upload-artifact@v3
       if: always()
       with:
-        name: k6-summary-report
+        name: k6-${{ github.job }}-summary-report
         path: summary.json
         
   Smoke_test:
@@ -35,17 +35,17 @@ jobs:
     - name: Run local k6 test
       uses: grafana/k6-action@v0.2.0
       with:
-        filename: Smoke_test.js
+        filename: ${{ github.job }}.js
         flags: --out json=results.json
         
     - name: Upload performance test results
       uses: actions/upload-artifact@v3
       if: always()
       with:
-        name: k6-full-report
+        name: k6-${{ github.job }}-full-report
         path: results.json
     - uses: actions/upload-artifact@v3
       if: always()
       with:
-        name: k6-summary-report
+        name: k6-${{ github.job }}-summary-report
         path: summary.json

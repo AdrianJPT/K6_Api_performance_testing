@@ -3,7 +3,7 @@ import { check, sleep } from 'k6';
 import { SharedArray } from 'k6/data';
 import { describe, expect} from 'https://jslib.k6.io/k6chaijs/4.3.4.0/index.js'
 import papaparse from 'https://jslib.k6.io/papaparse/5.1.1/index.js';
-
+import { textSummary } from 'https://jslib.k6.io/k6-summary/0.0.1/index.js';
 
 const url = 'https://reqres.in/api/users';
 

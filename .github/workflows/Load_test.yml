@@ -1,7 +1,28 @@
 name: Load_test
 on: push
 jobs:
-  k6_load_test:
+  Load_test:
+    runs-on: ubuntu-22.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Run local k6 test
+      uses: grafana/k6-action@v0.2.0
+      with:
+        filename: Load_test.js
+        flags: --out json=results.json
+        
+    - name: Upload performance test results
+      uses: actions/upload-artifact@v3
+      with:
+        name: k6-full-report
+        path: results.json
+    - uses: actions/upload-artifact@v3
+      with:
+        name: k6-summary-report
+        path: summary.json
+  Smoke_test:
     runs-on: ubuntu-22.04
     steps:
     - name: Checkout

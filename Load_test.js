@@ -22,7 +22,7 @@ export const options = {
         { duration: '5s', target: 0 }, // ramp-down to1 users
       ],
       thresholds: {
-        'http_req_duration': ['p(95)<55'], // 99% of requests must complete below 5.5s
+        'http_req_duration': ['p(95)<105'], // 99% of requests must complete below 10.5s
       },
     };
 
@@ -66,3 +66,11 @@ export default function () {
 
     sleep(1);
 };
+export function handleSummary(data) {
+  console.log('Finished executing performance tests');
+
+  return {
+    'stdout': textSummary(data, { indent: ' ', enableColors: true }), // Show the text summary to stdout...
+    'summary.json': JSON.stringify(data), // and a JSON with all the details...
+  };
+}

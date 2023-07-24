@@ -15,13 +15,17 @@ jobs:
         
     - name: Upload performance test results
       uses: actions/upload-artifact@v3
+      if: always()
       with:
         name: k6-full-report
         path: results.json
+        
     - uses: actions/upload-artifact@v3
+      if: always()
       with:
         name: k6-summary-report
         path: summary.json
+        
   Smoke_test:
     runs-on: ubuntu-22.04
     steps:
@@ -36,10 +40,12 @@ jobs:
         
     - name: Upload performance test results
       uses: actions/upload-artifact@v3
+      if: always()
       with:
         name: k6-full-report
         path: results.json
     - uses: actions/upload-artifact@v3
+      if: always()
       with:
         name: k6-summary-report
         path: summary.json

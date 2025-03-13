@@ -14,13 +14,13 @@ jobs:
         flags: --out json=results.json
         
     - name: Upload performance test results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: k6-${{ github.job }}-full-report
         path: results.json
         
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       if: always()
       with:
         name: k6-$${{ github.job }}-summary-report
@@ -39,12 +39,12 @@ jobs:
         flags: --out json=results.json
         
     - name: Upload performance test results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: k6-${{ github.job }}-full-report
         path: results.json
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       if: always()
       with:
         name: k6-${{ github.job }}-summary-report
@@ -62,12 +62,12 @@ jobs:
         flags: --out json=results.json
         
     - name: Upload performance test results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: k6-${{ github.job }}-full-report
         path: results.json
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       if: always()
       with:
         name: k6-${{ github.job }}-summary-report
@@ -85,12 +85,12 @@ jobs:
         flags: --out json=results.json
         
     - name: Upload performance test results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: k6-${{ github.job }}-full-report
         path: results.json
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       if: always()
       with:
         name: k6-${{ github.job }}-summary-report

@@ -14,11 +14,11 @@ jobs:
         flags: --out json=results.json
         
     - name: Upload performance test results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: k6-full-report
         path: results.json
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: k6-summary-report
         path: summary.json

@@ -1,4 +1,4 @@
-# K6_Api_performance_testing
+# K6 Api Performance Testing
 This project make a performance test to an API(POST) "https://reqres.in/api/users" using Data Parameterization
  * Smoke test
  * Spike test
